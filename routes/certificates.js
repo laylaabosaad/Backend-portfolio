@@ -30,6 +30,7 @@ import {
 } from "../controllers/certificates.js";
 const router = express.Router();
 
+
 router.get("/", getAllCertificates);
 router.post("/", upload.single("file"), protect, enterCertificates);
 router.get("/:id", protect, findACertificates);
