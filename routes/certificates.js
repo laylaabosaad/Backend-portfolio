@@ -33,7 +33,7 @@ const router = express.Router();
 router.get("/", getAllCertificates);
 router.post("/", upload.single("file"), protect, enterCertificates);
 router.get("/:id", protect, findACertificates);
-router.delete("/:id", protect, deleteACertificates);
+router.delete("/:id", deleteACertificates);
 router.patch("/:id", protect, upload.single("file"), updateACertificates);
 
 export default router;

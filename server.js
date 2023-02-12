@@ -10,6 +10,11 @@ import quoteRoutes from './routes/quote.js'
 import errorHandler from "./middleware/errorMiddleware.js";
 import userrouter from "./routes/user.js"
 const app = express()
+app.use(
+  cors({
+      origin:"http://localhost:3000",
+  })
+)
 import dotenv from 'dotenv'
 import * as url from 'url';
 import fs from "fs"
